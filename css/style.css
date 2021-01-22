@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@-webkit-keyframes word-find {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes word-find {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes td-find {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes td-find {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 1.8rem;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0.5rem;
+}
+
+h1 {
+  margin: 1.3rem 0;
+}
+
+table {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+/* границы ячеек тела таблицы */
+td {
+  font-size: 2.1rem;
+  width: 32px;
+  height: 32px;
+  border: 1px solid grey;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.08s;
+  transition: all 0.08s;
+}
+
+td:hover {
+  background-color: #ddd;
+  font-size: 2.4rem;
+}
+
+td.td-active {
+  background-color: #adf;
+}
+
+td.td-find {
+  background-color: #afd;
+  font-weight: 600;
+  -webkit-animation: td-find 0.3s ease-in-out;
+          animation: td-find 0.3s ease-in-out;
+}
+
+.buttons {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#words {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#words span {
+  line-height: 1.8;
+}
+
+#words span.word-find {
+  color: #6b6;
+  text-decoration: line-through;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: word-find 0.5s ease-in-out;
+          animation: word-find 0.5s ease-in-out;
+}
+
+button {
+  font-size: 1.6rem;
+  padding: 0.5rem 1.2rem;
+  margin: 0.6rem;
+  border: none;
+  background-color: #999;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #aaa;
+}
+
+button:active {
+  background-color: #888;
+}
