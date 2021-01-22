@@ -1,7 +1,7 @@
 let snd1 = new Audio();
-snd1.src = '../src/1.mp3';
+snd1.src = './src/1.mp3';
 let snd2 = new Audio();
-snd2.src = '../src/2.mp3';
+snd2.src = './src/2.mp3';
 let sound = [snd1, snd2];
 
 const _shufle = document.querySelector('#shufle');
